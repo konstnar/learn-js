@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сделать первый символ заглавным</title>
+    <script src="https://js.cx/test/libs.js"></script>
+    <script src="test.js"></script>
+</head>
+<body>
+<!--
+Напишите функцию ucFirst(str), которая возвращает строку str с заглавным первым символом, например:
+
+ucFirst("вася") == "Вася";
+ucFirst("") == ""; // нет ошибок при пустой строке
+-->
+
+
+<script>
+    function ucFirst(str) {
+        if(str) {
+            return str[0].toUpperCase() + str.substr(1, str.length);
+        } else {
+            return "";
+        }
+    }
+</script>
+</body>
+</html>

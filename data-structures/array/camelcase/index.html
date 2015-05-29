@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевести текст вида border-left-width в borderLeftWidth</title>
+</head>
+<body>
+<!--
+ Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+
+То есть, дефисы удаляются, а все слова после них получают заглавную букву.
+
+Например:
+
+camelize("background-color") == 'backgroundColor';
+camelize("list-style-image") == 'listStyleImage';
+camelize("-webkit-transition") == 'WebkitTransition';
+
+Такая функция полезна при работе с CSS.
+
+P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
+
+-->
+
+<script>
+    function camelize(str) {
+        var result = str.split('-');
+
+        for (var i = 0; i < str.length; i++) {
+            if(i == 0) {
+                continue;
+            } else if (result[i] > '') {
+                result[i] = result[i][0].toUpperCase() + result[i].slice(1);
+            }
+        }
+
+        return result.join('');
+    }
+</script>
+</body>
+</html>

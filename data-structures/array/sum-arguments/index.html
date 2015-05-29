@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сумма аргументов</title>
+</head>
+<body>
+<!--
+ Напишите функцию sum(...), которая возвращает сумму всех своих аргументов:
+
+sum() = 0
+sum(1) = 1
+sum(1, 2) = 3
+sum(1, 2, 3) = 6
+sum(1, 2, 3, 4) = 10
+-->
+<script>
+    function sum() {
+        var result = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            result += arguments[i];
+        }
+        return result;
+    }
+</script>
+</body>
+</html>
